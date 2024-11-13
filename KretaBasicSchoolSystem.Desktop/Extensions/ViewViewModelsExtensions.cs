@@ -57,6 +57,7 @@ namespace KretaDesktop.Extensions
                 DataContext = s.GetRequiredService<SchoolClassesViewModel>()
             });
 
+
         }
     }
 }

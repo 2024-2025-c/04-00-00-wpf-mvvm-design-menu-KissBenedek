@@ -18,15 +18,18 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         {
             _controlPanelViewModel = new ControlPanelViewModel();
             _schoolCitizensViewModel = new SchoolCitizensViewModel();
+            _schoolClassesViewModel = new SchoolClassesViewModel();
         }
 
         public MainViewModel(
             ControlPanelViewModel controlPanelViewModel,
-            SchoolCitizensViewModel schoolCitizensViewModel 
+            SchoolCitizensViewModel schoolCitizensViewModel, 
+            SchoolClassesViewModel schoolClassesViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
             _schoolCitizensViewModel = schoolCitizensViewModel;
+            _schoolClassesViewModel = schoolClassesViewModel;
 
 
             CurrentChildView = _controlPanelViewModel;
@@ -58,7 +61,8 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             CurrentChildView = _schoolCitizensViewModel;
         }
 
-        public void ShowClasses()
+        [RelayCommand]
+        public void ShowSchoolClasses()
         {
             Caption = "Osztályok";
             Icon = IconChar.ChalkboardUser;
