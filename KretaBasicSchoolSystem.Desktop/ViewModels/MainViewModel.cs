@@ -4,6 +4,7 @@ using FontAwesome.Sharp;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -11,6 +12,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
     {
         private ControlPanelViewModel _controlPanelViewModel;
         private SchoolCitizensViewModel _schoolCitizensViewModel;
+        private SchoolClassesViewModel _schoolClassesViewModel;
 
         public MainViewModel()
         {
@@ -54,6 +56,13 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Caption = "Iskolapolgárok";
             Icon = IconChar.UserGroup;
             CurrentChildView = _schoolCitizensViewModel;
+        }
+
+        public void ShowClasses()
+        {
+            Caption = "Osztályok";
+            Icon = IconChar.ChalkboardUser;
+            CurrentChildView = _schoolClassesViewModel;
         }
     }
 }
