@@ -19,10 +19,20 @@
         <schoolCitizensView:StudentView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type schoolCitizensViewModels:TeacherViewModel}">
+        <schoolCitizensView:TeacherView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type schoolCitizensViewModels:ParentViewModel}">
+        <schoolCitizensView:ParentView/>
+    </DataTemplate>
+
     <DataTemplate DataType="{x:Type SchoolClassesViewModels:SchoolClassesViewModel}">
         <SchoolClassesView:SchoolClassesView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type SchoolSubjectsViewModels:SchoolSubjectsViewModel}">
         <SchoolSubjectsView:SchoolSubjectsView/>
     </DataTemplate>
+
+
 </ResourceDictionary>
