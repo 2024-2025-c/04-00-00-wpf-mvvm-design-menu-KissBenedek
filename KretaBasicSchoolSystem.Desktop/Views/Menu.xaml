@@ -56,14 +56,15 @@
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
                              Tag="{StaticResource colorMidleGreen}"
-                                 Command="{Binding ShowSchoolClasses}">
+                                 Command="{Binding ShowSchoolClassesCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="ChalkboardUser" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Osztályok" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorMidleGreen}">
+                             Tag="{StaticResource colorMidleGreen}"
+                                 Command="{Binding ShowSchoolSubjectsCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="GraduationCap" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Tantárgyak" Style="{StaticResource menuButtonText}"/>
