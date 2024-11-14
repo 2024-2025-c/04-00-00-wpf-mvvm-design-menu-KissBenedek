@@ -18,7 +18,7 @@ namespace KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens
     /// <summary>
     /// Interaction logic for ParentView.xaml
     /// </summary>
-    public partial class ParentView : Page
+    public partial class ParentView : UserControl
     {
         public ParentView()
         {
