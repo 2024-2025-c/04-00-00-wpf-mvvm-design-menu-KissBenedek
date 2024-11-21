@@ -93,6 +93,38 @@ namespace KretaDesktop.Extensions
                 DataContext = s.GetRequiredService<SchoolGradesViewModel>()
             });
 
+            //School Grades
+            //Current lesson
+            services.AddSingleton<CurrentLessonViewModel>();
+            services.AddSingleton<CurrentLessonView>(s => new CurrentLessonView()
+            {
+                DataContext = s.GetRequiredService<CurrentLessonViewModel>()
+            });
+
+            //School Grades
+            //Classes taught
+            services.AddSingleton<ClassesTaughtViewModel>();
+            services.AddSingleton<ClassesTaughtView>(s => new ClassesTaughtView()
+            {
+                DataContext = s.GetRequiredService<ClassesTaughtViewModel>()
+            });
+
+            //School Grades
+            //End of year closing
+            services.AddSingleton<EndofYearViewModel>();
+            services.AddSingleton<EndofYearView>(s => new EndofYearView()
+            {
+                DataContext = s.GetRequiredService<EndofYearViewModel>()
+            });
+
+            //School Grades
+            //End of semester closing
+            services.AddSingleton<EndofSemesterViewModel>();
+            services.AddSingleton<EndofSemesterView>(s => new EndofSemesterView()
+            {
+                DataContext = s.GetRequiredService<EndofSemesterViewModel>()
+            });
+
         }
     }
 }
