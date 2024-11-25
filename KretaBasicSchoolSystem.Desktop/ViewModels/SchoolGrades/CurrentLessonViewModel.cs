@@ -9,5 +9,6 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects
 {
     public class CurrentLessonViewModel : BaseViewModel
     {
+
     }
 }

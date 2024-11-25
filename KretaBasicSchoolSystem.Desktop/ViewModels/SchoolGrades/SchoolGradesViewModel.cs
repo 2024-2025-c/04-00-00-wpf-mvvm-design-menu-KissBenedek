@@ -11,32 +11,37 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades
         private ClassesTaughtViewModel _classesTaughtViewModel;
         private EndofSemesterViewModel _endofSemesterViewModel;
         private EndofYearViewModel _endofYearViewModel;
+        private CurrentLessonViewModel _currentLessonViewModel;
 
         public SchoolGradesViewModel()
         {
             _currentSchoolGradesChildView = new ClassesTaughtViewModel();
             _currentSchoolGradesChildView = new EndofSemesterViewModel();
             _currentSchoolGradesChildView = new EndofYearViewModel();
+            _currentSchoolGradesChildView = new CurrentLessonViewModel();
 
 
 
             _classesTaughtViewModel = new ClassesTaughtViewModel();
             _endofSemesterViewModel = new EndofSemesterViewModel();
             _endofYearViewModel = new EndofYearViewModel();
+            _currentLessonViewModel = new CurrentLessonViewModel();
 
 
         }
 
-        public SchoolGradesViewModel(ClassesTaughtViewModel classesTaughtViewModel, EndofSemesterViewModel endofSemesterViewModel, EndofYearViewModel endofYearViewModel)
+        public SchoolGradesViewModel(ClassesTaughtViewModel classesTaughtViewModel, EndofSemesterViewModel endofSemesterViewModel, EndofYearViewModel endofYearViewModel, CurrentLessonViewModel currentLessonViewModel)
         {
             _classesTaughtViewModel = classesTaughtViewModel;
             _endofSemesterViewModel = endofSemesterViewModel;
             _endofYearViewModel = endofYearViewModel;
+            _currentLessonViewModel = currentLessonViewModel;
 
 
             _currentSchoolGradesChildView = new ClassesTaughtViewModel();
             _currentSchoolGradesChildView = new EndofSemesterViewModel();
             _currentSchoolGradesChildView = new EndofYearViewModel();
+            _currentSchoolGradesChildView = new CurrentLessonViewModel();
         }
 
         [ObservableProperty]
@@ -59,6 +64,12 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades
         public void ShowEndofYearView()
         {
             CurrentSchoolGradesChildView = _endofYearViewModel;
+        }
+
+        [RelayCommand]
+        public void ShowCurrentLessonView() 
+        {
+            CurrentSchoolGradesChildView = _currentLessonViewModel;
         }
 
 
