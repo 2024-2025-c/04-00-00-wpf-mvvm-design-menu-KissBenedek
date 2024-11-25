@@ -10,15 +10,19 @@
                     xmlns:SchoolSubjectsViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects"
                     xmlns:SchoolGradesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolGrades"
                     xmlns:SchoolGradesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades"
+                    xmlns:UsersView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.Users"
+                    xmlns:UsersViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.Users"
                     >
 
 
     <DataTemplate DataType="{x:Type controlPanelViewModels:ControlPanelViewModel}">
         <controlPanelView:ControlPanelView/>
     </DataTemplate>
+    
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:SchoolCitizensViewModel}">
         <schoolCitizensView:SchoolCitizensView/>
     </DataTemplate>
+    
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:StudentViewModel}">
         <schoolCitizensView:StudentView/>
     </DataTemplate>
@@ -59,4 +63,21 @@
         <SchoolGradesView:EndofYearView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type UsersViewModels:UsersViewModel}">
+        <UsersView:UsersView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type UsersViewModels:ModifyUsersViewModel}">
+        <UsersView:ModifyUsersView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type UsersViewModels:DeleteUsersViewModel}">
+        <UsersView:DeleteUsersView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type UsersViewModels:NewUsersViewModel}">
+        <UsersView:NewUsersView/>
+    </DataTemplate>
+    
+    
 </ResourceDictionary>
