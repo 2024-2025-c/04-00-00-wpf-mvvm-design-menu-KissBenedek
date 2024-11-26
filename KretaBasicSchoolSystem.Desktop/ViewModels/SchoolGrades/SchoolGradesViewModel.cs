@@ -15,9 +15,6 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades
 
         public SchoolGradesViewModel()
         {
-            _currentSchoolGradesChildView = new ClassesTaughtViewModel();
-            _currentSchoolGradesChildView = new EndofSemesterViewModel();
-            _currentSchoolGradesChildView = new EndofYearViewModel();
             _currentSchoolGradesChildView = new CurrentLessonViewModel();
 
 
@@ -38,9 +35,6 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades
             _currentLessonViewModel = currentLessonViewModel;
 
 
-            _currentSchoolGradesChildView = new ClassesTaughtViewModel();
-            _currentSchoolGradesChildView = new EndofSemesterViewModel();
-            _currentSchoolGradesChildView = new EndofYearViewModel();
             _currentSchoolGradesChildView = new CurrentLessonViewModel();
         }
 

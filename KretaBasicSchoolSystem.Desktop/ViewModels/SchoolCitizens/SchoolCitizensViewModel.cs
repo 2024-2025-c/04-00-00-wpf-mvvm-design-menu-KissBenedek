@@ -12,9 +12,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
 
         public SchoolCitizensViewModel()
         {
-            _currentSchoolCitizensChildView = new StudentViewModel();
             _currentSchoolCitizensChildView = new TeacherViewModel();
-            _currentSchoolCitizensChildView = new ParentViewModel();
 
 
             _studentViewModel = new StudentViewModel();
@@ -29,9 +27,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
             _parentViewModel = parentViewModel;
 
 
-            _currentSchoolCitizensChildView = new StudentViewModel();
             _currentSchoolCitizensChildView = new TeacherViewModel();
-            _currentSchoolCitizensChildView = new ParentViewModel();
         }
 
         [ObservableProperty]

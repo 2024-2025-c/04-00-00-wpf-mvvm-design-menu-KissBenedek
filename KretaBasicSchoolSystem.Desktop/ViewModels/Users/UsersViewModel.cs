@@ -12,9 +12,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.Users
 
         public UsersViewModel()
         {
-            _currentUsersChildView = new ModifyUsersViewModel();
             _currentUsersChildView = new DeleteUsersViewModel();
-            _currentUsersChildView = new NewUsersViewModel();
 
 
             _modifyUsersViewModel = new ModifyUsersViewModel();
@@ -28,9 +26,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.Users
             _deleteUsersViewModel = deleteUsersViewModel;
             _newUsersViewModel = newUsersViewModel;
 
-            _currentUsersChildView = new ModifyUsersViewModel();
             _currentUsersChildView= new DeleteUsersViewModel();
-            _currentUsersChildView = new NewUsersViewModel();
         }
 
 
