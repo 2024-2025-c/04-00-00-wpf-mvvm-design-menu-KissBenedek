@@ -22,7 +22,7 @@
                 <Setter Property="Foreground" Value="{StaticResource StandardButtonEnabled}"></Setter>
             </Trigger>
             <Trigger Property="IsFocused" Value="True">
-                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="Foreground" Value="Red"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>

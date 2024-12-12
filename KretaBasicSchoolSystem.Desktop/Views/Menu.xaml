@@ -24,18 +24,18 @@
                             Margin="0 10 0 10" 
                             >
                         <Ellipse Height="80" Width="80"
-                            Stroke="{StaticResource colorDarkGreen}"                            
+                            Stroke="{StaticResource colorMiddleBlue}"                            
                             StrokeThickness="2"                                 
                             Margin="-1,-1,-1,-1">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="/Images/profil.jpg"/>
+                                <ImageBrush ImageSource="/Images/profil.png"/>
                             </Ellipse.Fill>
                         </Ellipse>
                     </Border>
                     <!--Menu Buttons-->
                     <RadioButton 
                         Style="{StaticResource menuButton}"
-                        Tag="{StaticResource colorGreen}"                                 
+                        Tag="{StaticResource colorRed}"                                 
                         IsChecked="True"
                         Command="{Binding ShowDashbordCommand}"
                         >
@@ -46,7 +46,7 @@
                     </RadioButton>
                     <RadioButton
                         Style="{StaticResource menuButton}"
-                        Tag="{StaticResource colorMidleGreen}"
+                        Tag="{StaticResource colorRed}"
                         Command="{Binding ShowSchoolCitizensCommand}"                    
                      >
                         <StackPanel Orientation="Horizontal">
@@ -55,7 +55,7 @@
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorMidleGreen}"
+                             Tag="{StaticResource colorRed}"
                                  Command="{Binding ShowSchoolClassesCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="ChalkboardUser" Style="{StaticResource menuButtonIcon}"/>
@@ -63,7 +63,7 @@
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorMidleGreen}"
+                             Tag="{StaticResource colorRed}"
                                  Command="{Binding ShowSchoolSubjectsCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="GraduationCap" Style="{StaticResource menuButtonIcon}"/>
@@ -71,7 +71,7 @@
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
-                                Tag="{StaticResource colorMidleGreen}"
+                                Tag="{StaticResource colorRed}"
                                 Command="{Binding ShowSchoolGradesCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="ListNumeric" Style="{StaticResource menuButtonIcon}"/>
@@ -79,7 +79,7 @@
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
-                                Tag="{StaticResource colorMidleGreen}"
+                                Tag="{StaticResource colorRed}"
                                 Command="{Binding ShowUsersCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"/>
