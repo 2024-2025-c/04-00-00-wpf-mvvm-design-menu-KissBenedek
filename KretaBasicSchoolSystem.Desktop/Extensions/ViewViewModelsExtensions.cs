@@ -1,19 +1,17 @@
 ﻿using KretaBasicSchoolSystem.Desktop.ViewModels;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Login;
-using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
+using KretaBasicSchoolSystem.Desktop.ViewModels.Packages;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
-using KretaBasicSchoolSystem.Desktop.ViewModels.Users;
 using KretaBasicSchoolSystem.Desktop.Views;
 using KretaBasicSchoolSystem.Desktop.Views.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.Views.Login;
-using KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens;
+using KretaBasicSchoolSystem.Desktop.Views.Packages;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolClasses;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolGrades;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects;
-using KretaBasicSchoolSystem.Desktop.Views.Users;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace KretaDesktop.Extensions
@@ -42,36 +40,7 @@ namespace KretaDesktop.Extensions
             {
                 DataContext = s.GetRequiredService<ControlPanelViewModel>()
             });
-            // School Citizens
-            services.AddSingleton<SchoolCitizensViewModel>();
-            services.AddSingleton<SchoolCitizensView>(s => new SchoolCitizensView()
-            {
-                DataContext = s.GetRequiredService<SchoolCitizensViewModel>()
-            });
-
-            // Students
-            // School Citizens
-            services.AddSingleton<StudentViewModel>();
-            services.AddSingleton<StudentView>(s => new StudentView()
-            {
-                DataContext = s.GetRequiredService<StudentView>()
-            });
-
-            // School Citizens
-            // Teachers
-            services.AddSingleton<TeacherViewModel>();
-            services.AddSingleton<TeacherView>(s => new TeacherView()
-            {
-                DataContext = s.GetRequiredService<TeacherView>()
-            });
-
-            // School Citizens
-            // Parents
-            services.AddSingleton<ParentViewModel>();
-            services.AddSingleton<ParentView>(s => new ParentView()
-            {
-                DataContext = s.GetRequiredService<ParentView>()
-            });
+            
 
             //School Classes
             services.AddSingleton<SchoolClassesViewModel>();
@@ -128,35 +97,13 @@ namespace KretaDesktop.Extensions
             });
 
 
-            //Users
-            services.AddSingleton<UsersViewModel>();
-            services.AddSingleton<UsersView>(s => new UsersView()
-            {
-                DataContext= s.GetRequiredService<UsersViewModel>()
-            });
+            
 
-            //Users
-            //Modify
-            services.AddSingleton<ModifyUsersViewModel>();
-            services.AddSingleton<ModifyUsersView>(s => new ModifyUsersView()
+            //Packages
+            services.AddSingleton<PackagesViewModel>();
+            services.AddSingleton<PackagesView>(s => new PackagesView()
             {
-                DataContext = s.GetRequiredService<ModifyUsersViewModel>()
-            });
-
-            //Users
-            //Delete
-            services.AddSingleton<DeleteUsersViewModel>();
-            services.AddSingleton<DeleteUsersView>(s => new DeleteUsersView()
-            {
-                DataContext = s.GetRequiredService<DeleteUsersViewModel>()
-            });
-
-            //Users
-            //Create
-            services.AddSingleton<NewUsersViewModel>();
-            services.AddSingleton<NewUsersView>(s => new NewUsersView()
-            {
-                DataContext = s.GetRequiredService<NewUsersViewModel>()
+                DataContext = s.GetRequiredService<PackagesViewModel>()
             });
 
         }

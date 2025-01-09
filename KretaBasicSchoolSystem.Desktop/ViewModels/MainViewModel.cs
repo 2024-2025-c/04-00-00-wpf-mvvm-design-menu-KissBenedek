@@ -3,48 +3,43 @@ using CommunityToolkit.Mvvm.Input;
 using FontAwesome.Sharp;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
-using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
+using KretaBasicSchoolSystem.Desktop.ViewModels.Packages;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
-using KretaBasicSchoolSystem.Desktop.ViewModels.Users;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
     public partial class MainViewModel : BaseViewModel
     {
         private ControlPanelViewModel _controlPanelViewModel;
-        private SchoolCitizensViewModel _schoolCitizensViewModel;
         private SchoolClassesViewModel _schoolClassesViewModel;
         private SchoolSubjectsViewModel _schoolSubjectsViewModel;
         private SchoolGradesViewModel _schoolGradesViewModel;
-        private UsersViewModel _usersViewModel;
+        private PackagesViewModel _packagesViewModel;
 
         public MainViewModel()
         {
             _controlPanelViewModel = new ControlPanelViewModel();
-            _schoolCitizensViewModel = new SchoolCitizensViewModel();
             _schoolClassesViewModel = new SchoolClassesViewModel();
             _schoolSubjectsViewModel = new SchoolSubjectsViewModel();
             _schoolGradesViewModel = new SchoolGradesViewModel();
-            _usersViewModel = new UsersViewModel();
+            _packagesViewModel = new PackagesViewModel();
         }
 
         public MainViewModel(
-            ControlPanelViewModel controlPanelViewModel,
-            SchoolCitizensViewModel schoolCitizensViewModel, 
+            ControlPanelViewModel controlPanelViewModel, 
             SchoolClassesViewModel schoolClassesViewModel,
             SchoolSubjectsViewModel schoolSubjectsViewModel,
             SchoolGradesViewModel schoolGradesViewModel,
-            UsersViewModel usersViewModel
+            PackagesViewModel packagesViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
-            _schoolCitizensViewModel = schoolCitizensViewModel;
             _schoolClassesViewModel = schoolClassesViewModel;
             _schoolSubjectsViewModel = schoolSubjectsViewModel;
             _schoolGradesViewModel = schoolGradesViewModel;
-            _usersViewModel = usersViewModel;
+            _packagesViewModel = packagesViewModel;
 
 
             CurrentChildView = _controlPanelViewModel;
@@ -69,11 +64,11 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         }
 
         [RelayCommand]
-        public void ShowSchoolCitizens()
+        public void ShowPackages()
         {
-            Caption = "Iskolapolgárok";
-            Icon = IconChar.UserGroup;
-            CurrentChildView = _schoolCitizensViewModel;
+            Caption = "Csomagok";
+            Icon = IconChar.Sun;
+            CurrentChildView = _packagesViewModel;
         }
 
         [RelayCommand]
@@ -100,12 +95,5 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             CurrentChildView = _schoolGradesViewModel;
         }
 
-        [RelayCommand]
-        public void ShowUsers() 
-        {
-            Caption = "Felhasználó";
-            Icon = IconChar.Users;
-            CurrentChildView = _usersViewModel;
-        }
     }
 }

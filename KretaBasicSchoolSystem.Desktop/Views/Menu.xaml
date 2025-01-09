@@ -47,43 +47,11 @@
                     <RadioButton
                         Style="{StaticResource menuButton}"
                         Tag="{StaticResource colorRed}"
-                        Command="{Binding ShowSchoolCitizensCommand}"                    
-                     >
+                        Command="{Binding ShowPackagesCommand}"                    
+                        >
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Iskolapolgárok" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorRed}"
-                                 Command="{Binding ShowSchoolClassesCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="ChalkboardUser" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Osztályok" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorRed}"
-                                 Command="{Binding ShowSchoolSubjectsCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="GraduationCap" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Tantárgyak" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}"
-                                Tag="{StaticResource colorRed}"
-                                Command="{Binding ShowSchoolGradesCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="ListNumeric" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Osztályzatok" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}"
-                                Tag="{StaticResource colorRed}"
-                                Command="{Binding ShowUsersCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Felhasználók" Style="{StaticResource menuButtonText}"/>
+                            <fa:IconImage Icon="Sun" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Csomagok" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
                 </StackPanel>

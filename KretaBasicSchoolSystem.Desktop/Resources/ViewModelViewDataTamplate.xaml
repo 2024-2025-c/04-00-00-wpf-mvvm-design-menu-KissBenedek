@@ -2,16 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controlPanelViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel"
                     xmlns:controlPanelView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.ControlPanel"
-                    xmlns:schoolCitizensViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens"
-                    xmlns:schoolCitizensView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens"
                     xmlns:SchoolClassesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses"
                     xmlns:SchoolClassesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolClasses"
                     xmlns:SchoolSubjectsView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects"
                     xmlns:SchoolSubjectsViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects"
                     xmlns:SchoolGradesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolGrades"
                     xmlns:SchoolGradesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades"
-                    xmlns:UsersView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.Users"
-                    xmlns:UsersViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.Users"
+                    xmlns:PackagesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.Packages"
+                    xmlns:PackagesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.Packages"
                     >
 
 
@@ -19,21 +17,6 @@
         <controlPanelView:ControlPanelView/>
     </DataTemplate>
     
-    <DataTemplate DataType="{x:Type schoolCitizensViewModels:SchoolCitizensViewModel}">
-        <schoolCitizensView:SchoolCitizensView/>
-    </DataTemplate>
-    
-    <DataTemplate DataType="{x:Type schoolCitizensViewModels:StudentViewModel}">
-        <schoolCitizensView:StudentView/>
-    </DataTemplate>
-
-    <DataTemplate DataType="{x:Type schoolCitizensViewModels:TeacherViewModel}">
-        <schoolCitizensView:TeacherView/>
-    </DataTemplate>
-
-    <DataTemplate DataType="{x:Type schoolCitizensViewModels:ParentViewModel}">
-        <schoolCitizensView:ParentView/>
-    </DataTemplate>
 
     <DataTemplate DataType="{x:Type SchoolClassesViewModels:SchoolClassesViewModel}">
         <SchoolClassesView:SchoolClassesView/>
@@ -63,21 +46,8 @@
         <SchoolGradesView:EndofYearView/>
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type UsersViewModels:UsersViewModel}">
-        <UsersView:UsersView/>
+    <DataTemplate DataType="{x:Type PackagesViewModels:PackagesViewModel}">
+        <PackagesView:PackagesView/>
     </DataTemplate>
-
-    <DataTemplate DataType="{x:Type UsersViewModels:ModifyUsersViewModel}">
-        <UsersView:ModifyUsersView/>
-    </DataTemplate>
-
-    <DataTemplate DataType="{x:Type UsersViewModels:DeleteUsersViewModel}">
-        <UsersView:DeleteUsersView/>
-    </DataTemplate>
-
-    <DataTemplate DataType="{x:Type UsersViewModels:NewUsersViewModel}">
-        <UsersView:NewUsersView/>
-    </DataTemplate>
-    
     
 </ResourceDictionary>
